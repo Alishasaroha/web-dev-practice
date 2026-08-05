@@ -26,8 +26,12 @@ function renderTasks(){
     doneList.innerHTML="";
     for(const task of tasks){
         const card = document.createElement("div");
+        card.classList.add("task-card");
         const moveBtn = document.createElement("button");
-        const delBtn = document.createElement("button");        const title = document.createElement("p");
+        const delBtn = document.createElement("button");  
+        moveBtn.classList.add("move-btn");
+        delBtn.classList.add("delete-btn");
+        const title = document.createElement("p");
         title.innerText = task.title;
         delBtn.textContent ="Delete";
         card.appendChild(title);
